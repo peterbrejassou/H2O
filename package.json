@@ -1,0 +1,53 @@
+{
+  "name": "ihaveagreen",
+  "version": "1.0.0",
+  "description": "WP Theme eco-conception",
+  "bugs": {
+    "url": "https://gitlab.com/romainPetiot/starterthemesusty/issues"
+  },
+  "homepage": "https://gitlab.com/romainPetiot/starterthemesusty#readme",
+  "devDependencies": {
+    "@wordpress/browserslist-config": "^2.2.2",
+    "autoprefixer": "^9.1.5",
+    "browser-sync": "^2.26.5",
+    "chokidar-cli": "^1.2.1",
+    "node-normalize-scss": "^8.0.0",
+    "node-sass": "^4.9.3",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.0.1",
+    "postcss-focus-within": "^3.0.0",
+    "rtlcss": "^2.4.0",
+    "gulp": "^4.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-watch": "^5.0.1",
+    "path": "^0.12.7",
+    "vinyl-ftp": "^0.6.1"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "browserslist": [
+    "extends @wordpress/browserslist-config"
+  ],
+  "scripts": {
+    "build:style": "node-sass style.scss style.css --output-style expanded && postcss -r style.css",
+    "build": "run-p \"build:*\" ",
+    "build:js": "jshint script/*.js && concat -o script.js script/*.js",
+    "watch": "chokidar \"**/*.scss\" \"script/*.js\" -c \"npm run build\" --initial",
+    "start": "browser-sync start --proxy 'localhost/agrilogique/' --files 'style.css, script.js, **/*.php'"
+  },
+  "dependencies": {
+    "concat": "^1.0.3",
+    "jshint": "^2.10.2"
+  }
+}

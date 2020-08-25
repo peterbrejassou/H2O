@@ -1,0 +1,113 @@
+header#masthead{
+  background: $firstColor;
+
+  .wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+
+    #logo-h2o{
+      position: absolute;
+    }
+
+    #menu{
+      width: 60%;
+
+      #menu-main-menu{
+        height: 100%;;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    
+        li {
+          position: relative;
+
+          a{
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: .3s;
+
+            &::after{
+              content: "";
+              width: 44px;
+              height: 44px;
+              background: rgba(98, 205, 194, .66);
+              position: absolute;
+              top: -50%;
+              left: 0;
+              border-radius: 50%;
+              opacity: 0;
+              transition: .3s;
+            }
+
+            &:hover::after{
+              opacity: 1;
+            }
+          }
+
+          &.current-menu-item {
+            position: relative;
+
+            a::after{
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px){
+    .wrapper{
+      padding: 20px;
+
+      #menu{
+        display: none;
+      }
+
+      .btn-menu{
+        display: block !important;
+        background: none;
+        border: none;
+        outline: none;
+      }
+
+    }
+  }
+}
+
+#menu-mobile{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background: $firstColor;
+  z-index: 100;
+
+  #close-menu-mobile{
+    cursor: pointer;
+    color: white;
+    margin-top: 50px;
+  }
+
+  ul{
+    padding: 0;
+  }
+
+  li{
+    padding: 0;
+    margin: 20px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 17px;
+  }
+
+  a{
+    color: white;
+    text-decoration: none;
+  }
+}

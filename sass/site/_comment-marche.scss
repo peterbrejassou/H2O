@@ -1,0 +1,214 @@
+#comment-marche{
+   padding-bottom: 50px;
+   
+   p{
+      margin: 0;
+   }
+
+   .header-title{
+      height: 400px;
+      position: relative;
+
+      h1{
+         font-weight: bold;
+         font-size: 48px;
+         color: $firstColor;
+         margin-top: 70px;
+      }
+   }
+
+   .etapes{
+      background: $firstColor;
+      color: white;
+
+      .intro-texte{
+         color: $blueH2o;
+         font-size: 48px;
+         font-weight: bold;
+         margin-left: 80px;
+      }
+
+      .step{
+         display: inline-flex;
+         position: relative;
+
+         &:not(:first-child){
+            margin-top: 80px;
+         }
+
+         .number{
+            font-size: 48px;
+            color: $firstColor;
+            background: white;
+            width: 79px;
+            height: 79px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            box-shadow: 4px 4px 2px $blueH2o;
+            border-radius: 50%;
+         }
+
+         .textes{
+            margin-left: 90px;
+            width: 90%;
+
+            .titre{
+               font-size: 36px;
+               font-weight: 600;
+               padding-bottom: 30px;
+            }
+         }
+
+         &::after{
+            content: "";
+            width: 80px;
+            height: 4px;
+            background: white;
+            position: absolute;
+            top: 150px;
+            left: 0px;
+            transform: rotate(90deg);
+         }
+      }
+   }
+
+   .congrats{
+      img{
+         display: inline;
+         vertical-align: middle;
+      }
+      span{
+         display: inline;
+         vertical-align: middle;
+         margin-left: 30px;
+      }
+      a{
+        display: block;
+        width: 370px;
+      }
+
+
+
+
+
+      .modal-window {
+         position: fixed;
+         background-color: rgba(255, 255, 255, 0.25);
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+         z-index: 999;
+         visibility: hidden;
+         opacity: 0;
+         pointer-events: none;
+         transition: all 0.3s;
+         &:target {
+           visibility: visible;
+           opacity: 1;
+           pointer-events: auto;
+         }
+         &>div {
+           width: 949px;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           padding: 3em;
+           background: $firstColor;
+           border-radius: 30px;
+         }
+       }
+       
+       .modal-close {
+         color: white;
+         line-height: 50px;
+         font-size: 80%;
+         position: absolute;
+         right: 0;
+         text-align: center;
+         top: 0;
+         width: 70px;
+         text-decoration: none;
+         opacity: .6;
+         &:hover {
+           opacity: 1;
+         }
+       }
+   }
+
+   .technologie{
+      .content-tech{
+         display: flex;
+      }
+   }
+
+   .application{
+      .content-app{
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 0 50px;
+
+         .logos{
+            img:last-child{
+               margin-top: 30px;
+            }
+         }
+
+         .parag-texte{
+            margin-left: 150px;
+         }
+      }
+   }
+
+   .distributeurs{
+      .distributeurs-logos{
+         display: flex;
+         justify-content: space-between;
+         margin-top: 30px;
+      }
+   }
+
+   .parag-texte{
+      margin-top: 30px !important;
+   }
+
+   .btn-h2o{
+      @include btnh2ocreux;
+      width: 370px;
+      margin: 30px auto auto auto;
+      font-size: 25px;
+   }
+
+   .questions{
+      text-align: center;
+
+      .btn-h2o{
+         display: block;
+         width: 220px;
+      }
+
+      .footer-questions{
+         p{
+            margin-top: 30px;
+            font-size: 30px;
+            font-weight: 600;
+            color: $firstColor;
+
+            a{
+               color: $blueH2o;
+               text-decoration: none;
+               transition: .3s;
+
+               &:hover{
+                  text-decoration: underline;
+               }
+            }
+         }
+      }
+   }
+
+}

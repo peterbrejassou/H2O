@@ -1,0 +1,123 @@
+#footer {
+  background: $firstColor;
+  color: $white;
+  padding: 30px 50px;
+  margin: auto;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  #top-footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    .left-align{
+      text-align: left;
+    }
+
+    .left-col {
+      width: 25%;
+      .align-left{
+        text-align: left;
+      }
+    }
+
+    .middle-col {
+      width: 33%;
+
+      .mailbox{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        input[type="email"]{
+          color: white;
+          background: none;
+          border: none;
+          border-bottom: 1px solid white;
+          width: 80%;
+          outline: none;
+  
+          &::placeholder{
+            color: rgba(255, 255, 255, .5);
+          }
+        }
+        input[type="submit"]{
+          background: white;
+          border-radius: 50%;
+          width: 35px;
+          height: 35px;
+          border: none;
+          font-weight: bold;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .right-col {
+      width: 33%;
+
+      .rs{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+
+        img:last-child{
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  #bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    #menu-footer-menu{
+      display: flex;
+      padding: 0;
+
+      li:not(:first-child){
+        margin-left: 30px;
+        position: relative;
+
+        &:before{
+          content: "-";
+          position: absolute;
+          left: -18px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1200px){
+  #footer{
+    padding: 20px;
+
+    #top-footer{
+      flex-wrap: wrap;
+
+      .left-col, .middle-col, .right-col{
+        width: 100%;
+      }
+    }
+
+    #bottom-footer{
+      flex-direction: column;
+
+      #menu-footer-menu{
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

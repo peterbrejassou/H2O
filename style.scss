@@ -1,0 +1,16 @@
+/*
+Theme Name: H2O
+Theme URI: https://ihaveagreen.fr
+Author: I Have a Green
+Author URI: https://ihaveagreen.fr
+Description: Thème enfant de Susty 
+Version: 1.0
+Template: susty-master
+*/
+
+/* Normalize */
+@import "node_modules/node-normalize-scss/normalize";
+@import "sass/mixins";
+@import "sass/variables";
+@import "sass/site/site";
+@import "sass/global";

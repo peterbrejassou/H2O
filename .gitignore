@@ -1,0 +1,11 @@
+node_modules
+
+# Operating system files
+.Spotlight-V100
+.Trashes
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+.git
+gulpfile.js
